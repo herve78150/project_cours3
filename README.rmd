@@ -50,7 +50,7 @@ Good luck!
 
 Modify your work directory
 
-## Run run.analysis in two step
+## Run run.analysis in thrid step
 
 ### First step
 Run the three lines which creates a directory ./data and downloads UCI HAR Dataset.zip file into ./data.
