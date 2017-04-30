@@ -42,15 +42,13 @@ Good luck!
 
 - run.analysis.r
 - README.rmd
-- README.html
-- Codebook.rmd
 - Codebook.html
 
 ## Open run.analysis.r
 
 Modify your work directory
 
-## Run run.analysis in thrid step
+## Run run.analysis in two step
 
 ### First step
 Run the three lines which creates a directory ./data and downloads UCI HAR Dataset.zip file into ./data.
