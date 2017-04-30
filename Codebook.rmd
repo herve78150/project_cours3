@@ -1,0 +1,89 @@
+---
+title: "Codebook "
+date: "30 avril 2017"
+output: html_document: default
+---
+
+```{r, echo=FALSE }
+knitr::opts_chunk$set(error = TRUE)
+```
+## Original data
+
+The original data files come from  "/data/UCI HAR Dataset" directory, which has been 
+downloaded from <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
+
+We use in this homework the following files:
+
+1. Info
+
+- README.txt
+  
+1. Variables:
+
+- activity_labels.txt
+- features.txt
+- features_info.txt
+
+
+2. Mesures :
+
+- test/X_test.txt
+- test/y_test.txt
+- train/X_train.txt
+- train/y_train.txt
+- train/subject_train.txt
+- test/subject_test.txt
+ 
+ 
+## The result of analysis is two tables:
+
+
+###mean_std:
+```{r}
+mean_std<-read.table("./data/join_mean_std.txt")
+str(mean_std)
+```
+
+
+### tidy_t
+```{r}
+tidy_t<-read.table("./data/data_group_means.txt")
+str(tidy_t)
+```
+
+## Data process
+
+mean_std and tidy_t tables were performed following the instructions asked:
+
+1.Merges the training and the test sets to create three  data sets.
+    
+    X_train.txt and X_test.txt
+    subject_train.txt and subject_test.txt
+    y_train.txt and y_test.txt
+
+
+2.Extracts the variables which mesure the mean and standard deviation for each measurement.
+    
+    select the rows of features table with mean() and std() labels.
+    select the columns of the mesures table (X_train.txt and X_test.txt).
+    named the columns of the mesure with mean and std labels.
+
+3.Uses descriptive activity names to name the activities in the data set.
+    
+    Create a table with an activity label and the name of the activity(LAYING,...).
+
+4.Appropriately labels the data set with descriptive variable names.
+    
+    Finaly join the colums of the tree tables(subject_train_test, train_test_label,       mean_std_train_test) an get mean_std.
+    Save mean_std.
+
+5.From the data set in step 4, creates a second, independent tidy data set with the       average of each variable for each activity and each subject.
+    
+    We group the mean_std table by subject and activity columns then calculate the        mean of each mesures and get tidy_t table. 
+    Save tidy_t.
+
+
+
+
+ 
+

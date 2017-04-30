@@ -1,0 +1,68 @@
+---
+title: "README"
+date: "30 avril 2017"
+output: html_document
+---
+
+```{r, echo=FALSE }
+knitr::opts_chunk$set(error = TRUE)
+``` 
+
+## Computer Context
+
+- Windows 10
+- Rx64 3.1.3
+- RStudio 1.0.143
+
+
+##Subject
+
+Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
+
+<http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>
+
+Here are the data for the project:
+
+<https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
+
+## The homework 
+
+1 Merges the training and the test sets to create one data set.
+
+2 Extracts only the measurements on the mean and standard deviation for each measurement.
+
+3 Uses descriptive activity names to name the activities in the data set
+
+4 Appropriately labels the data set with descriptive variable names.
+
+5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+Good luck!
+
+## Files in the zip code you get from github
+
+- run.analysis.r
+- README.rmd
+- README.html
+- Codebook.rmd
+- Codebook.html
+
+## Open run.analysis.r
+
+Modify your work directory
+
+## Run run.analysis in two step
+
+### First step
+Run the three lines which creates a directory ./data and downloads UCI HAR Dataset.zip file into ./data.
+### Second step
+unzip "UCI HAR Dataset.zip".
+
+### third step
+
+Execute the rest of the code.
+Two files are created in ./data :
+- ./data/join_mean_std.txt
+- ./data/data_group_means.txt
+
+The CodeBook.rmd details the data and explains how to get the tidy table.
+
